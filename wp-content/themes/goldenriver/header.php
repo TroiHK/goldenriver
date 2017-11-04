@@ -67,8 +67,15 @@
 		<?php get_template_part('template-parts/blocks/group', 'button'); ?>
 
 		<?php if ( is_home() || is_front_page() ) : ?>
+
 			<?php get_template_part('template-parts/home/slider'); ?>
-		<?php else : ?>
+
+		<?php elseif ( is_page() ) : ?>
+
+			<?php get_template_part('template-parts/blocks/page', 'banner'); ?>
+		
+		<?php elseif ( is_singular('subdivision') ) : ?>
+
 			<div class="section section-vtr-intro">
 				<?php 
 					$id = get_the_id();
@@ -93,6 +100,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        
 		<?php endif; ?>
 
 		<?php get_template_part('template-parts/blocks/button', 'lienhe'); ?>
