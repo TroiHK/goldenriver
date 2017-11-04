@@ -1,0 +1,14 @@
+{
+  "name": "athena-website",
+  "authors": [
+    "Athena"
+  ],
+  "homepage": "http://weareathena.com/",
+  "dependencies": {
+    "bootstrap": "*",
+    "font-awsome": "*",
+    "swiper": "*",
+    "wow-js-svg-fix": "*",
+    "lodash": "*"
+  }
+}
