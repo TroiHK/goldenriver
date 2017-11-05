@@ -31,7 +31,7 @@ Template Name: Contact Page
             </div>
             <div class="col-sm-6">
                 <div class="contact-box">
-                    <div class="title">Nội dung liên h</div>
+                    <div class="title">Nội dung liên hệ</div>
                     <div class="wrapper">
                     	
                          <div class="contact-form">
