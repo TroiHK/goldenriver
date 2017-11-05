@@ -10,7 +10,7 @@ Template Name: Contact Page
         <div class="row">
             <div class="col-sm-6">
                 <div class="contact-box">
-                    <div class="title">Liên hệ</div>
+                    <div class="title"><?php echo get_field('title_left'); ?></div>
                     <div class="wrapper">
                     	<?php if(have_rows('content_left')): ?>
                         <div class="address">
@@ -31,11 +31,11 @@ Template Name: Contact Page
             </div>
             <div class="col-sm-6">
                 <div class="contact-box">
-                    <div class="title">Nội dung liên hệ</div>
+                    <div class="title"><?php echo get_field('title_contact'); ?></div>
                     <div class="wrapper">
                     	
                          <div class="contact-form">
-                         	<?php echo do_shortcode('[contact-form-7 id="305" title="Form lien he page"]'); ?>
+                         	<?php echo do_shortcode( get_field('form_contact') ); ?>
                         </div>
                     </div> 
                 </div>
