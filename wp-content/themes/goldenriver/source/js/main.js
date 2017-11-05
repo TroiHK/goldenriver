@@ -201,7 +201,16 @@
             sliders.each(function(index, element){
                 var slide_id = $(this).attr('id');
                 var options = $(this).data('options');
-                
+                var navigations = {
+                    nextEl : options.nextButton,
+                    prevEl : options.prevButton
+                }
+                var paginations = {
+				    el: options.pagination,
+				    type: 'bullets',
+				  }
+				options.pagination = paginations;
+                options.navigation = navigations;
                 if( options.slidesPerView > 1 ){
                     if( options.slidesPerView < 7 && options.slidesPerView > 3 ){
                         options.breakpoints = {
@@ -210,11 +219,11 @@
                             },
                             650: {
                                 slidesPerView: 2
-                            },
+                            }, 
                             480: {
-                                slidesPerView: 1
+                                slidesPerView: 1 
                             }
-                        }
+                        } 
                     }
                     else if( options.slidesPerView < 4 ){
                         options.breakpoints = {
@@ -228,8 +237,22 @@
                     }
                 }
 
-                window[slide_id] = new Swiper( this, options );
+                window[slide_id] = new Swiper('#'+slide_id, options );
             });
+            if( $('body').find('.tabbed-2').length ) {
+	            $('body').find('.tabbed-2').each(function() {
+	                var t = $(this);
+	                t.find('.tab-content:first').show();
+	                t.find('.tab-title li:first').addClass('active');
+
+	                t.find('.tab-title li a').click(function(event) {
+	                    event.preventDefault();
+	                    var tab = $(this).attr('href');
+	                    $(this).parent('li').addClass('active').siblings('li.active').removeClass('active');
+	                    $(".swiper-slide-active "tab).show().siblings().not('.tab-title').hide();
+	                });
+	            });
+	        }
         }
 
 	});

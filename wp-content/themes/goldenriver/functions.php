@@ -14,7 +14,7 @@ function athena_scripts() {
 	//js
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
-
+	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'athena-script', get_template_directory_uri() . '/dist/assets/min/script.min.js', array('jquery'), null, true );
 
 }
