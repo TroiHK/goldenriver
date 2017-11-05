@@ -19,5 +19,6 @@
             break;
     }
 ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
