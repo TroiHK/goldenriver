@@ -77,6 +77,7 @@
 
     <?php endwhile; ?>
 <?php endif; ?>
+
 <?php if ( have_rows('place_items') ) : ?>
     <?php $row_index = $row_index + 1; ?>
         <div id="section-vtr-content-<?php echo $row_index; ?>" class="section section-has-content<?php if ($row_index%2 != 0) echo ' left'; else echo ' right'; ?>">

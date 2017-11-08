@@ -43,7 +43,11 @@
 
 	<div class="wrap-page">
 
-	<div id="section1" class="section section1 home">
+	<?php 
+		$type_content = is_singular('subdivision') ? ( get_field('type_sub_content') == 'type_3' ? true : false ) : false;
+	?>
+
+	<div id="section1" class="section section1 <?php echo $type_content ? 'section-luxury' : 'home'; ?>">
 		<div class="bg-menu"></div>
 
 		<div class="logo">

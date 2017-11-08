@@ -11,7 +11,7 @@
             break;
 
         case 'type_3':
-            get_template_part('template-parts/single-subdivision/content-type-3');
+            get_template_part('template-parts/single-subdivision/content-type-2');
             break;
         
         default:
@@ -19,6 +19,5 @@
             break;
     }
 ?>
-<?php endif; ?>
 
 <?php get_footer(); ?>
