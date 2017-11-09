@@ -47,7 +47,7 @@
 		$type_content = is_singular('subdivision') ? ( get_field('type_sub_content') == 'type_3' ? true : false ) : false;
 	?>
 
-	<div id="section1" class="section section1 <?php echo $type_content ? 'section-luxury' : 'home'; ?>">
+	<div id="section1" class="section section1 <?php echo $type_content || is_page_template( 'pages/tpl-khuyenmai.php' ) ? 'section-luxury' : 'home'; ?>">
 		<div class="bg-menu"></div>
 
 		<div class="logo">
@@ -73,6 +73,10 @@
 		<?php if ( is_home() || is_front_page() ) : ?>
 
 			<?php get_template_part('template-parts/home/slider'); ?>
+
+		<?php elseif ( is_page_template( 'pages/tpl-khuyenmai.php' ) ) : ?>
+
+			<img src="http://goldenriver.vinhomes.vn/wp-content/uploads/2016/08/ldp-banner-5.jpg" alt="">
 
 		<?php elseif ( is_page() ) : ?>
 
