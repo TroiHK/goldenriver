@@ -26,7 +26,7 @@
 			<?php endif; ?>
 			<?php if ( $facebook_link_opt ) : ?>
 			<li>
-				<a href="tel:<?php echo $youtube_link_opt; ?>"><i class="fa fa-phone"></i></a>
+				<a href="tel:<?php echo $phone_number_opt; ?>"><i class="fa fa-phone"></i></a>
 			</li>
 			<?php endif; ?>
 		</ul>
