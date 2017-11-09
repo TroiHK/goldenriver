@@ -17,14 +17,14 @@
 				</a>
 			</li>
 			<?php endif; ?>
-			<?php if ( $facebook_link_opt ) : ?>
+			<?php if ( $youtube_link_opt ) : ?>
 			<li>
 				<a class="youtube-cta" href="<?php echo $youtube_link_opt; ?>">
 					<i class="fa fa-youtube"></i>
 				</a>
 			</li>
 			<?php endif; ?>
-			<?php if ( $facebook_link_opt ) : ?>
+			<?php if ( $phone_number_opt ) : ?>
 			<li>
 				<a href="tel:<?php echo $phone_number_opt; ?>"><i class="fa fa-phone"></i></a>
 			</li>
