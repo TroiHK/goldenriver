@@ -62,6 +62,51 @@
         </div>
     <?php endif; ?>
 
+    <?php  if( get_row_layout() == 'mat_bang_the_aqua' ) : ?>
+        <div class="section" id="tienich">
+            <h3 class="title">
+                <span class="lg-text wow fadeInDown"><strong><?php echo get_sub_field('title'); ?></strong></span>
+                <span class="sm-text wow fadeInUp"><?php echo get_sub_field('sub_title'); ?></span>
+            </h3>
+            <?php if(have_rows('tangs')): ?>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="tabbed">
+                        <ul class="tab-title">
+                            <?php while(have_rows('tangs')): the_row(); ?>
+                                <li class="lv1"><a href="#aqua-<?php echo get_row_index(); ?>"><?php the_sub_field('name'); ?></a></li>
+                            <?php endwhile; ?>
+                        </ul>
+                        <?php while(have_rows('tangs')): the_row(); $index_parent = get_row_index() ?>
+                            <div class="tab-content" id="aqua-<?php echo get_row_index(); ?>">
+                                <?php while(have_rows('tang_chi_tiet')): the_row(); $index = get_row_index();
+                                    $img = get_sub_field('image');
+                                ?>
+                                    <p><img src="<?php echo $img['url']; ?>" alt=""></p>
+                                    <div class="tab-row">
+                                        <ul class="tab-title lv2">
+                                            <?php while(have_rows('offices')): the_row();  ?>
+                                                <li><a href="#aqua-<?php echo $index_parent.'-'.$index.'-'.get_row_index(); ?>"><?php the_sub_field('name') ?></a></li>
+                                            <?php endwhile; ?>
+                                        </ul>
+                                        <?php while(have_rows('offices')): the_row();
+                                            $img = get_sub_field('image');
+                                        ?>
+                                        <div class="tab-content lv2" id="aqua-<?php echo $index_parent.'-'.$index.'-'.get_row_index(); ?>">
+                                            <img src="<?php echo $img['url']; ?>" alt="">
+                                        </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+        </div>
+    <?php endif; ?>
+
     <?php  if( get_row_layout() == 'mat_bang' ) : ?>
         <?php echo get_sub_field('html'); ?>
     <?php endif; ?>
