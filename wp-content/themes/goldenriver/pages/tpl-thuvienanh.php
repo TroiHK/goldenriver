@@ -7,20 +7,17 @@ Template Name: Thư Viện Ảnh
 
 	<div class="section innerpager" id="media-page">
 		<?php 
-    $menuParameters = array(
+    $menulibraly = array(
     'menu'  => 'Library sub menu',
     'menu_class'=> 'nav nav-tabs text-center news--tab', 
      );
-        wp_nav_menu( $menuParameters);
+        wp_nav_menu( $menulibraly);
     ?>
-
-
 		<div class="tab-content">
 			<div id="phoi-canh-du-an" class="tab-pane active" role="tabpanel">
 				<div class="container">
 					<div class="row">
 						<div class="list-items list-items--grip">
-
 							<?php if(have_rows('items_tv')): ?>
 							<?php while (have_rows('items_tv')): the_row(); ?>
 							<div class="item col-md-4 col-sm-6">
@@ -36,8 +33,6 @@ Template Name: Thư Viện Ảnh
 							</div>
 							<?php endwhile; ?>
 							<?php endif; ?>
-
-
 						</div>
 					</div>
 				</div>
