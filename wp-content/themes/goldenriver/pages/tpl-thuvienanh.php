@@ -3,7 +3,7 @@
 Template Name: Thư Viện Ảnh
 */
 ?>
-	<?php get_header(); ?>
+<?php get_header(); ?>
 
 	<div class="section innerpager" id="media-page">
 		<?php 
@@ -41,4 +41,4 @@ Template Name: Thư Viện Ảnh
 
 	</div>
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
